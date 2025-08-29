@@ -6,7 +6,7 @@ import { useDebouncedCallback } from 'use-debounce';
 const SearchBox = () => {
   const dispatch = useDispatch();
   const handleFilterChange = event => dispatch(changeFilter(event.target.value));
-  const debounceSetSearchText = useDebouncedCallback(handleFilterChange, 1000);
+  const debounceSetSearchText = useDebouncedCallback(handleFilterChange, 100);
 
   return (
     <div className={css['wrapper']}>
