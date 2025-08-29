@@ -1,5 +1,11 @@
 # Changelog goit-neo-react-hw-module6
 
+## [1.2.1](https://gitlab.com/goit-uni/react/goit-neo-react-hw-module6/compare/1.2.0...1.2.1) (2025-08-29)
+
+### Bug Fixes
+
+* review comments ([a8838c4](https://gitlab.com/goit-uni/react/goit-neo-react-hw-module6/commit/a8838c481255a05bc0844127d2ad569347396932))
+
 ## [1.2.0](https://gitlab.com/goit-uni/react/goit-neo-react-hw-module6/compare/1.1.0...1.2.0) (2025-08-29)
 
 ### Features
