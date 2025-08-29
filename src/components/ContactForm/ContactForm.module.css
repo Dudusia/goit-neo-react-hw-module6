@@ -1,0 +1,27 @@
+.form {
+  max-width: 300px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.label {
+  display: block;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+.error {
+  font-size: 14px;
+  color: orangered;
+}
+
+.submit-button {
+  margin: 0 auto;
+  display: block;
+  font-size: 16px;
+}
