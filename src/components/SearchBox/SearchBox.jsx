@@ -1,13 +1,17 @@
 import css from './SearchBox.module.css';
+import { changeFilter } from '../../redux/filtersSlice';
+import { useDispatch } from 'react-redux';
+import { useDebouncedCallback } from 'use-debounce';
 
-const SearchBox = ({ onChange }) => {
-  const handleChange = event => {
-    onChange(event.target.value);
-  };
+const SearchBox = () => {
+  const dispatch = useDispatch();
+  const handleFilterChange = event => dispatch(changeFilter(event.target.value));
+  const debounceSetSearchText = useDebouncedCallback(handleFilterChange, 1000);
+
   return (
     <div className={css['wrapper']}>
       <span>Find contacts by name</span>
-      <input type="text" onChange={handleChange} />
+      <input type="text" onChange={debounceSetSearchText} />
     </div>
   );
 };

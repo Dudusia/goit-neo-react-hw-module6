@@ -1,4 +1,3 @@
-import { useDebouncedCallback } from 'use-debounce';
 import { useState, useEffect } from 'react';
 import ContactForm from '../ContactForm/ContactForm';
 import ContactList from '../ContactList/ContactList';
@@ -6,6 +5,8 @@ import SearchBox from '../SearchBox/SearchBox';
 import initContacts from '../../data/contacts.json';
 import css from './App.module.css';
 import { nanoid } from 'nanoid';
+import { getFilter } from '../../redux/filtersSlice';
+import { useSelector } from 'react-redux';
 
 const App = () => {
   const [contacts, setContacts] = useState(() => {
@@ -17,13 +18,12 @@ const App = () => {
   });
 
   const [filteredContacts, setFilteredContacts] = useState(null);
-  const [searchText, setSearchText] = useState('');
-  const debounceSetSearchText = useDebouncedCallback(setSearchText, 100);
 
   useEffect(() => {
     window.localStorage.setItem('saved-contacts', JSON.stringify(contacts));
   }, [contacts]);
-
+  
+  const searchText = useSelector(getFilter);
   useEffect(() => {
     setFilteredContacts(() =>
       contacts.filter(contact =>
@@ -51,7 +51,7 @@ const App = () => {
     <div className={css['container']}>
       <h1>Phonebook</h1>
       <ContactForm handleAdd={handleAdd} />
-      <SearchBox onChange={debounceSetSearchText} />
+      <SearchBox />
       <ContactList
         contacts={filteredContacts != null ? filteredContacts : contacts}
         handleDelete={handleDelete}
