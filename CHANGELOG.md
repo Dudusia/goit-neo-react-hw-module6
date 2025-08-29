@@ -1,5 +1,11 @@
 # Changelog goit-neo-react-hw-module6
 
+## [1.2.2](https://gitlab.com/goit-uni/react/goit-neo-react-hw-module6/compare/1.2.1...1.2.2) (2025-08-29)
+
+### Bug Fixes
+
+* wrap app with persistgate ([7e493eb](https://gitlab.com/goit-uni/react/goit-neo-react-hw-module6/commit/7e493ebc191b60d042fe8c7f530a256875e61060))
+
 ## [1.2.1](https://gitlab.com/goit-uni/react/goit-neo-react-hw-module6/compare/1.2.0...1.2.1) (2025-08-29)
 
 ### Bug Fixes
