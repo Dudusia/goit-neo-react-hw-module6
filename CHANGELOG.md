@@ -1,5 +1,11 @@
 # Changelog goit-neo-react-hw-module6
 
+## [1.1.0](https://gitlab.com/goit-uni/react/goit-neo-react-hw-module6/compare/1.0.0...1.1.0) (2025-08-29)
+
+### Features
+
+* use filter with redux ([4a44081](https://gitlab.com/goit-uni/react/goit-neo-react-hw-module6/commit/4a440817e5531da179abde92f0cc523e93f93758))
+
 ## 1.0.0 (2025-08-29)
 
 ### Features
