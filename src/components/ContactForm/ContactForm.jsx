@@ -19,15 +19,16 @@ const ContactSchema = Yup.object().shape({
 
 const ContactForm = () => {
   const fieldId = useId();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleSubmit = (values, formikHelpers) => {
-    dispatch(addContact(
-    {
-      id: nanoid(),
-      name: values.name,
-      number: values.number,
-    }))
+    dispatch(
+      addContact({
+        id: nanoid(),
+        name: values.name,
+        number: values.number,
+      })
+    );
     formikHelpers.resetForm();
   };
 
